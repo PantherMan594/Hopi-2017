@@ -200,3 +200,7 @@ body > .overlay {
         display: block;
     }
 }
+
+#blog {
+    font-size: 16px;
+}
