@@ -203,7 +203,15 @@ body > .overlay {
     font-size: 20px;
 }
 
+#smallscreen {
+    display: none;
+}
+
 @media screen and (max-width: 700px) {
+    #title {
+        text-align: center;
+    }
+    
     #departure {
         margin-top: 0;
         text-align: center;
