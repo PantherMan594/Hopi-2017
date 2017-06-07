@@ -1,0 +1,202 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    margin: 0;
+    font-size: 20px;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+.overlay {
+    min-height: 100vh;
+    width: 100vw;
+}
+
+#barbox {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#goalbar {
+    height: 0;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #652032;
+    opacity: 0.85;
+    box-shadow: 0px -1px 2px 0px grey;
+}
+
+@keyframes goalbarhover {
+    from {background-color: #652032;}
+    to {background-color: #773849;}
+}
+
+@keyframes goalbarhoveroff {
+    from {background-color: #773849;}
+    to {background-color: #652032;}
+}
+
+.goalbar-sect {
+    width: 100vw;
+    border-bottom: 1px solid #480d1d;
+    animation-name: goalbarhoveroff;
+    animation-duration: 0.5s;
+}
+
+.goalbar-sect:hover {
+    animation-name: goalbarhover;
+    animation-duration: 0.5s;
+    background-color: #773849;
+    cursor: pointer;
+}
+
+.goalbar-sect .overlay {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+}
+
+.goalbar-sect .data {
+    position: fixed;
+    z-index: 10;
+    width: 65vw;
+    height: 100vh;
+    top: 0;
+    left: 100vw;
+    margin-left: 15vw;
+    padding: 10vw;
+    background-color: #ffffff;
+    cursor: default;
+    box-shadow: -1px 0px 2px 0px grey;
+}
+
+#goalbar .close {
+    position: fixed;
+    z-index: 11;
+    margin-left: 7.5vw;
+    bottom: 10vh;
+    text-align: center;
+    width: 100vw;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+#number, #goal {
+    font-size: 25px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+#number {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#goal {
+    margin-top: -1.4em;
+}
+
+#goal.below {
+    margin-top: 1.4em;
+    color: white;
+}
+
+h1 {
+    text-align: left;
+    font-family: "Raleway", "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 50%;
+    max-width: 500px;
+    border: 0;
+    border-top: 2px solid #000000;
+    margin: 3em auto;
+    padding: 0;
+}
+
+body > .overlay {
+    position: relative;
+}
+
+#contentbox {
+    box-shadow: 0px 0px 15px 1px grey;
+    background: white;
+    color: black;
+    position: relative;
+    width: 90vw;
+    margin-left: 5vw;
+    min-height: 100vh;
+    margin-top: 105vh;
+    margin-bottom: -30px;
+}
+
+#content {
+    width: 75vw;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3em 0;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.box {
+    box-shadow: 0px 0px 5px 0px grey;
+    padding: 0.75em;
+    margin: 0.5em 0;
+}
+
+.small {
+    margin-left: 1em;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+#departure {
+    text-align: right;
+    margin-top: -2.5em;
+    font-weight: bold;
+    font-size: 1.17em;
+}
+
+#countdown {
+    margin-left: 0.5em;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#smallscreen {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    #departure {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    #smallscreen {
+        display: block;
+    }
+}
