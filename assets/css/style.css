@@ -19,30 +19,38 @@ body {
 #barbox {
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    background-image: url("../img/HopiGray.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 100vh;
 }
 
 #goalbar {
     height: 0;
+    max-height: 100vh;
     width: 100vw;
     position: fixed;
     bottom: 0;
     left: 0;
     background-color: #652032;
-    opacity: 0.85;
+    background-image: url("../img/Hopi.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 100vh;
     box-shadow: 0px -1px 2px 0px grey;
 }
 
 @keyframes goalbarhover {
-    from {background-color: #652032;}
-    to {background-color: #773849;}
+    from {background-color: rgba(255, 255, 255, 0);}
+    to {background-color: rgba(255, 255, 255, 0.1);}
 }
 
 @keyframes goalbarhoveroff {
-    from {background-color: #773849;}
-    to {background-color: #652032;}
+    from {background-color: rgba(255, 255, 255, 0.1);}
+    to {background-color: rgba(255, 255, 255, 0);}
 }
 
 .goalbar-sect {
@@ -55,7 +63,7 @@ body {
 .goalbar-sect:hover {
     animation-name: goalbarhover;
     animation-duration: 0.5s;
-    background-color: #773849;
+    background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
 }
 
@@ -97,14 +105,13 @@ body {
 #number, #goal {
     font-size: 25px;
     position: fixed;
-    width: 100%;
-    text-align: center;
+    margin-left: 2em;
     pointer-events: none;
 }
 
 #number {
-    color: #ffffff;
     font-weight: bold;
+    color: #ffffff;
 }
 
 #goal {
@@ -113,7 +120,17 @@ body {
 
 #goal.below {
     margin-top: 1.4em;
-    color: white;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 700px) {
+    #number, #goal {
+        margin-left: 1em;
+        padding: 3px 1em;
+        color: #000000;
+        background-color: rgba(255, 255, 255, 0.75);
+        display: inline-block;
+    }
 }
 
 h1 {
@@ -139,8 +156,8 @@ body > .overlay {
 
 #contentbox {
     box-shadow: 0px 0px 15px 1px grey;
-    background: white;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     position: relative;
     width: 90vw;
     margin-left: 5vw;
@@ -184,10 +201,6 @@ body > .overlay {
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 20px;
-}
-
-#smallscreen {
-    display: none;
 }
 
 @media screen and (max-width: 700px) {
