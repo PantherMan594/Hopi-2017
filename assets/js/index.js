@@ -109,7 +109,11 @@ function processBlog(data) {
         var date = entry.gsx$date.$t;
         var author = entry.gsx$author.$t;
         var text = converter.makeHtml(entry.gsx$text.$t);
-        $('<div class="box"><div class="title">' + date + '<span class="small">' + author + '</span></div>' + text + '</div>').prependTo('#blog');
+        var dateAuthor = '';
+        if (date || author) {
+            dateAuthor = '<div class="title">' + date + '<span class="small">' + author + '</span></div>';
+        }
+        $('<div class="box">' + dateAuthor + text + '</div>').prependTo('#blog');
     }
 
     $('.goalbar-sect').click(function (e) {

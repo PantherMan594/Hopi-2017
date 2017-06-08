@@ -11,6 +11,53 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 700px) {
+    [class*="col-"] {
+        min-width: 25%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    [class*="col-"] {
+        min-width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    [class*="col-"] {
+        min-width: 50%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    [class*="col-"] {
+        min-width: 100%;
+    }
+}
+
 .overlay {
     min-height: 100vh;
     width: 100vw;
@@ -125,11 +172,10 @@ body {
     display: inline-block;
 }
 
-h1 {
-    text-align: left;
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
     font-family: "Raleway", "Lato", Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 2.5em;
 }
 
 h4 {
@@ -198,11 +244,15 @@ body > .overlay {
     margin-left: 0.5em;
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 1.25em;
+    font-size: 1.1em;
 }
 
 #smallscreen {
     display: none;
+}
+
+#title {
+    text-align: left;
 }
 
 @media screen and (max-width: 700px) {
@@ -222,4 +272,8 @@ body > .overlay {
 
 #blog {
     font-size: 1em;
+}
+
+.center {
+    text-align: center;
 }
