@@ -6,7 +6,7 @@ body {
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-weight: 300;
     margin: 0;
-    font-size: 1em;
+    font-size: 100%;
 
     -webkit-font-smoothing: antialiased;
 }
@@ -43,21 +43,16 @@ body {
     box-shadow: 0px -1px 2px 0px grey;
 }
 
-@keyframes goalbarhover {
-    from {background-color: rgba(255, 255, 255, 0);}
-    to {background-color: rgba(255, 255, 255, 0.1);}
-}
-
-@keyframes goalbarhoveroff {
-    from {background-color: rgba(255, 255, 255, 0.1);}
-    to {background-color: rgba(255, 255, 255, 0);}
-}
-
 .goalbar-sect {
     width: 100vw;
-    border-bottom: 1px solid #480d1d;
     animation-name: goalbarhoveroff;
     animation-duration: 0.5s;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 350ms;
+}
+
+.goalbar-sect:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .goalbar-sect:hover {

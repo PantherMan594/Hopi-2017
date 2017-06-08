@@ -104,12 +104,12 @@ function processMoney(data) {
 function processBlog(data) {
     var entries = data.feed.entry;
     var converter = new showdown.Converter();
-    for (var i = entries.length - 1; i >=0; i--) {
+    for (var i = 0; i < entries.length; i++) {
         var entry = entries[i];
         var date = entry.gsx$date.$t;
         var author = entry.gsx$author.$t;
         var text = converter.makeHtml(entry.gsx$text.$t);
-        $('<div class="box"><div class="title">' + date + '<span class="small">' + author + '</span></div>' + text + '</div>').appendTo('#blog');
+        $('<div class="box"><div class="title">' + date + '<span class="small">' + author + '</span></div>' + text + '</div>').prependTo('#blog');
     }
 
     $('.goalbar-sect').click(function (e) {
