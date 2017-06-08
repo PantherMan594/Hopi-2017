@@ -6,7 +6,7 @@ body {
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-weight: 300;
     margin: 0;
-    font-size: 20px;
+    font-size: 1em;
 
     -webkit-font-smoothing: antialiased;
 }
@@ -98,14 +98,14 @@ body {
     bottom: 10vh;
     text-align: center;
     width: 100vw;
-    font-size: 15px;
+    font-size: 0.85em;
     pointer-events: none;
 }
 
 #number, #goal {
-    font-size: 25px;
+    font-size: 1.5em;
     position: fixed;
-    margin-left: 2em;
+    margin-left: 5vw;
     pointer-events: none;
 }
 
@@ -123,20 +123,22 @@ body {
     color: #ffffff;
 }
 
-@media screen and (max-width: 700px) {
-    #number, #goal {
-        margin-left: 1em;
-        padding: 3px 1em;
-        color: #000000;
-        background-color: rgba(255, 255, 255, 0.75);
-        display: inline-block;
-    }
+.portrait #number, .portrait #goal {
+    padding: 3px 1em;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: inline-block;
 }
 
 h1 {
     text-align: left;
     font-family: "Raleway", "Lato", Arial, Helvetica, sans-serif;
     font-weight: 400;
+    font-size: 2.5em;
+}
+
+h4 {
+    font-style: italic;
 }
 
 hr {
@@ -186,7 +188,7 @@ body > .overlay {
 .small {
     margin-left: 1em;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 #departure {
@@ -200,7 +202,7 @@ body > .overlay {
     margin-left: 0.5em;
     font-family: "Lato", Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 #smallscreen {
@@ -223,5 +225,5 @@ body > .overlay {
 }
 
 #blog {
-    font-size: 16px;
+    font-size: 1em;
 }

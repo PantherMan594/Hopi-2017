@@ -50,7 +50,15 @@ $(document).ready(function () {
 	});
 });
 
+$(window).resize(function () {
+    if ($(window).height() * 7 / 5 > $(window).width()) {
+        $('body').addClass('portrait');
+    } else {
+        $('body').removeClass('portrait');
+    }
+})
 
+$(window).resize();
 
 function processMoney(data) {
     var entries = data.feed.entry;
@@ -96,7 +104,7 @@ function processMoney(data) {
 function processBlog(data) {
     var entries = data.feed.entry;
     var converter = new showdown.Converter();
-    for (var i = 0; i < entries.length; i++) {
+    for (var i = entries.length - 1; i >=0; i--) {
         var entry = entries[i];
         var date = entry.gsx$date.$t;
         var author = entry.gsx$author.$t;
