@@ -64,10 +64,14 @@ function processMoney(data) {
     var entries = data.feed.entry;
     goal = parseFloat(entries[0].gsx$goal.$t);
     current = parseFloat(entries[0].gsx$totalraised.$t);
+    if (new Date().getTime() > departureDate) {
+        current = goal;
+        $('#number, #goal').hide();
+    }
     $('#goal').text('Goal: ' + goal.formatMoney());
     setTimeout(function () {
         $('#goalbar').css('height', 0);
-                    $('#goal').removeClass('below');
+        $('#goal').removeClass('below');
         $('#goalbar').animate({
             height: percent() + '%'
         }, {
@@ -81,24 +85,26 @@ function processMoney(data) {
         });
     }, 500);
 
-    for (var i = 0; i < entries.length; i++) {
-        var entry = entries[i];
-        var name = entry.gsx$donatedto.$t;
-        var amt = parseFloat(entry.gsx$sumamount.$t);
-        $('<div class="goalbar-sect" style="height: ' + (amt * 100 / current) + '%"><div class="overlay"></div><div class="data"><div class="title">' + name + '</span></div><div class="description"><em class="small">Raised ' + amt.formatMoney(2) + '</em></div></div></div>').appendTo('#goalbar');
-    }
-
-    $('.goalbar-sect').click(function (e) {
-        if (e.target !== this) {
-            $(this).children('.data, .overlay').animate({ left: '100vw'}, 'slow');
-            $('#goalbar .close').fadeOut();
-            activeOverlay = false;
-        } else {
-            $(this).children('.data, .overlay').animate({ left: '0'}, 'slow');
-            $('#goalbar .close').delay(400).fadeIn();
-            activeOverlay = true;
+    if (new Date().getTime() < departureDate) {
+        for (var i = 0; i < entries.length; i++) {
+            var entry = entries[i];
+            var name = entry.gsx$donatedto.$t;
+            var amt = parseFloat(entry.gsx$sumamount.$t);
+            $('<div class="goalbar-sect" style="height: ' + (amt * 100 / current) + '%"><div class="overlay"></div><div class="data"><div class="title">' + name + '</span></div><div class="description"><em class="small">Raised ' + amt.formatMoney(2) + '</em></div></div></div>').appendTo('#goalbar');
         }
-    });
+
+        $('.goalbar-sect').click(function (e) {
+            if (e.target !== this) {
+                $(this).children('.data, .overlay').animate({ left: '100vw' }, 'slow');
+                $('#goalbar .close').fadeOut();
+                activeOverlay = false;
+            } else {
+                $(this).children('.data, .overlay').animate({ left: '0' }, 'slow');
+                $('#goalbar .close').delay(400).fadeIn();
+                activeOverlay = true;
+            }
+        });
+    }    
 }
 
 function processBlog(data) {
