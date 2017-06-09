@@ -7,6 +7,12 @@ function percent() {
 
 $(document).ready(function () {
     $('#goalbar').delay(500).fadeIn(1000);
+    if ($(window).scrollTop() < $('#contentbox').offset().top) {
+        $('html, body').delay(2000).animate({
+            scrollTop: $('#contentbox').offset().top
+        }, 'slow');
+    }
+
     var countdown = setInterval(function () {
         var now = new Date().getTime();
         var delta = departureDate - now;
