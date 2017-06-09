@@ -1,16 +1,3 @@
-Number.prototype.formatMoney = function(c, d, t){
-var n = this, 
-    c = isNaN(c = Math.abs(c)) ? 2 : c, 
-    d = d == undefined ? "." : d, 
-    t = t == undefined ? "," : t, 
-    s = n < 0 ? "-" : "", 
-    i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
-    j = (j = i.length) > 3 ? j % 3 : 0;
-   return '$' + s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
- };
-
-var current = 0;
-var goal = 0;
 var activeOverlay = false;
 var departureDate = new Date("Jul 4, 2017 06:25:00").getTime();
 
@@ -19,8 +6,7 @@ function percent() {
 }
 
 $(document).ready(function () {
-    $('#goalbar .close').hide();
-    $('#number').text(0);
+    $('#goalbar').delay(500).fadeIn(1000);
     var countdown = setInterval(function () {
         var now = new Date().getTime();
         var delta = departureDate - now;
@@ -36,12 +22,6 @@ $(document).ready(function () {
             $('#departure').text('Jul 4 - Jul 17');
         }
     }, 1000);
-    $.ajax({
-        type: "GET",
-        url: "https://spreadsheets.google.com/feeds/list/1ukebBgrtl3TU7HG-MpN8eON-nA6jjfQf0QZecDu6uvc/2/public/values?alt=json",
-        dataType: "json",
-        success: function(data) {processMoney(data);}
-	});
     $.ajax({
         type: "GET",
         url: "https://spreadsheets.google.com/feeds/list/1ZWoEWTRTFWRk2ymhJVNiu71mengsHeuUaPOz4A4qN5o/1/public/values?alt=json",
@@ -60,53 +40,6 @@ $(window).resize(function () {
 
 $(window).resize();
 
-function processMoney(data) {
-    var entries = data.feed.entry;
-    goal = parseFloat(entries[0].gsx$goal.$t);
-    current = parseFloat(entries[0].gsx$totalraised.$t);
-    if (new Date().getTime() > departureDate) {
-        current = goal;
-        $('#number, #goal').hide();
-    }
-    $('#goal').text('Goal: ' + goal.formatMoney());
-    setTimeout(function () {
-        $('#goalbar').css('height', 0);
-        $('#goal').removeClass('below');
-        $('#goalbar').animate({
-            height: percent() + '%'
-        }, {
-            duration: 1000,
-            step: function( now, fx ) {
-                $('#number').text((now * goal / 100).formatMoney());
-                if ($('#goal').offset().top < $('#goal').height()) {
-                    $('#goal').addClass('below');
-                }
-            }
-        });
-    }, 500);
-
-    if (new Date().getTime() < departureDate) {
-        for (var i = 0; i < entries.length; i++) {
-            var entry = entries[i];
-            var name = entry.gsx$donatedto.$t;
-            var amt = parseFloat(entry.gsx$sumamount.$t);
-            $('<div class="goalbar-sect" style="height: ' + (amt * 100 / current) + '%"><div class="overlay"></div><div class="data"><div class="title">' + name + '</span></div><div class="description"><em class="small">Raised ' + amt.formatMoney(2) + '</em></div></div></div>').appendTo('#goalbar');
-        }
-
-        $('.goalbar-sect').click(function (e) {
-            if (e.target !== this) {
-                $(this).children('.data, .overlay').animate({ left: '100vw' }, 'slow');
-                $('#goalbar .close').fadeOut();
-                activeOverlay = false;
-            } else {
-                $(this).children('.data, .overlay').animate({ left: '0' }, 'slow');
-                $('#goalbar .close').delay(400).fadeIn();
-                activeOverlay = true;
-            }
-        });
-    }    
-}
-
 function processBlog(data) {
     var entries = data.feed.entry;
     var converter = new showdown.Converter();
@@ -121,24 +54,4 @@ function processBlog(data) {
         }
         $('<div class="box">' + dateAuthor + text + '</div>').prependTo('#blog');
     }
-
-    $('.goalbar-sect').click(function (e) {
-        if (e.target !== this) {
-            $(this).children('.data, .overlay').animate({ left: '100vw'}, 'slow');
-            $('#goalbar .close').fadeOut();
-            activeOverlay = false;
-        } else {
-            $(this).children('.data, .overlay').animate({ left: '0'}, 'slow');
-            $('#goalbar .close').delay(400).fadeIn();
-            activeOverlay = true;
-        }
-    });
 }
-
-jQuery('body').keyup(function(event) {
-    if (activeOverlay && event.which == 27) {
-        $('.goalbar-sect .data, .goalbar-sect .overlay').animate({ left: '100vw'}, 'slow');
-        $('#goalbar .close').fadeOut();
-        activeOverlay = false;
-    }
-});

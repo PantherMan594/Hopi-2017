@@ -69,107 +69,20 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-image: url("../img/HopiGray.svg");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: auto 100vh;
+    background-color: #652032;
 }
 
 #goalbar {
-    height: 0;
-    max-height: 100vh;
+    height: 100vh;
     width: 100vw;
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #652032;
     background-image: url("../img/Hopi.svg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: auto 100vh;
     box-shadow: 0px -1px 2px 0px grey;
-}
-
-.goalbar-sect {
-    width: 100vw;
-    animation-name: goalbarhoveroff;
-    animation-duration: 0.5s;
-    background-color: rgba(255, 255, 255, 0);
-    transition: background-color 350ms;
-}
-
-.goalbar-sect:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.goalbar-sect:hover {
-    animation-name: goalbarhover;
-    animation-duration: 0.5s;
-    background-color: rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-}
-
-.goalbar-sect .overlay {
-    position: fixed;
-    z-index: 9;
-    top: 0;
-    left: 100vw;
-    width: 100vw;
-    height: 100vh;
-    cursor: pointer;
-}
-
-.goalbar-sect .data {
-    position: fixed;
-    z-index: 10;
-    width: 65vw;
-    height: 100vh;
-    top: 0;
-    left: 100vw;
-    margin-left: 15vw;
-    padding: 10vw;
-    background-color: #ffffff;
-    cursor: default;
-    box-shadow: -1px 0px 2px 0px grey;
-}
-
-#goalbar .close {
-    position: fixed;
-    z-index: 11;
-    margin-left: 7.5vw;
-    bottom: 10vh;
-    text-align: center;
-    width: 100vw;
-    font-size: 0.85em;
-    pointer-events: none;
-}
-
-#number, #goal {
-    font-size: 1.5em;
-    position: fixed;
-    margin-left: 5vw;
-    pointer-events: none;
-}
-
-#number {
-    font-weight: bold;
-    color: #ffffff;
-}
-
-#goal {
-    margin-top: -1.4em;
-}
-
-#goal.below {
-    margin-top: 1.4em;
-    color: #ffffff;
-}
-
-.portrait #number, .portrait #goal {
-    padding: 3px 1em;
-    color: #000000;
-    background-color: rgba(255, 255, 255, 0.75);
-    display: inline-block;
 }
 
 h1, h2, h3, h4, h5, h6 {
