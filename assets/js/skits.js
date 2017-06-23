@@ -11,12 +11,14 @@ function update() {
         var line = $(lines[i]);
         var prevLine = $(lines[i - 1]);
         var nextLine = $(lines[i + 1]);
+        line.removeClass('highlight');
         if (line.hasClass('stage')) {
             if (showStage) line.show();
             else line.hide();
         } else if (!line.hasClass('scene')) {
             if (line.hasClass(character)) {
                 line.show();
+                line.addClass('highlight');
                 if (!showLine) {
                     line.addClass('hideLine');
                 } else {

@@ -30,3 +30,7 @@ table td:nth-child(1), th {
 td {
     padding: 0.5em;
 }
+
+.highlight .name {
+    background-color: yellow;
+}
