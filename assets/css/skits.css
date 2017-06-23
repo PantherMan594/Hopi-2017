@@ -9,13 +9,6 @@
     color: white;
 }
 
-.stephen::before {content: "Stephen: ";}
-.kevin::before {content: "Kevin: ";}
-.ian::before {content: "Ian: ";}
-.steve::before {content: "Steve: ";}
-.ayesha::before {content: "Ayesha: ";}
-.announcer::before {content: "Announcer: ";}
-
 .stage, .scene {
     color: black;
 }
@@ -28,3 +21,19 @@ span.stage::after {content: ")";}
     font-size: 20px;
     font-weight: bold;
 }
+
+/* SKIT CHARACTERS */
+
+/* RUNNING SKIT */
+.stephen::before {content: "Stephen: ";}
+.kevin::before {content: "Kevin: ";}
+.ian::before {content: "Ian: ";}
+.steve::before {content: "Steve: ";}
+.ayesha::before {content: "Ayesha: ";}
+.announcer::before {content: "Announcer: ";}
+
+/* BULLY SKIT */
+.bully::before {content: "Bully: ";}
+.daniel::before {content: "Daniel: ";}
+.lindsey::before {content: "Lindsey: ";}
+.auntielin::before {content: "Auntie Lin: ";}
