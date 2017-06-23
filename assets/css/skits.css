@@ -1,0 +1,30 @@
+.line::before {
+    font-weight: bold;
+    color: black;
+}
+.line {
+    margin: 1em;
+}
+.line.hideLine {
+    color: white;
+}
+
+.stephen::before {content: "Stephen: ";}
+.kevin::before {content: "Kevin: ";}
+.ian::before {content: "Ian: ";}
+.steve::before {content: "Steve: ";}
+.ayesha::before {content: "Ayesha: ";}
+.announcer::before {content: "Announcer: ";}
+
+.stage, .scene {
+    color: black;
+}
+
+.stage {font-style: italic;}
+span.stage::before {content: "(";}
+span.stage::after {content: ")";}
+
+.scene {
+    font-size: 20px;
+    font-weight: bold;
+}
