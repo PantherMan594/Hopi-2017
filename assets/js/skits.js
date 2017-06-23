@@ -101,4 +101,16 @@ $(document).ready(function () {
     $('.narrator').prepend('<span class="name">Narrator: </span>');
     $('.citizen').prepend('<span class="name">Citizen: </span>');
     $('.crowd').prepend('<span class="name">Crowd: </span>');
+
+    /* PRODIGAL SON SKIT */
+    $('.penny').prepend('<span class="name">Penny: </span>');
+    $('.dame').prepend('<span class="name">Dame: </span>');
+    $('.dad').prepend('<span class="name">Dad: </span>');
+    $('.boy1').prepend('<span class="name">Boy 1: </span>');
+    $('.boy2').prepend('<span class="name">Boy 2: </span>');
+    //$('.friend1').prepend('<span class="name">Friend 1: </span>');
+    //$('.friend2').prepend('<span class="name">Friend 2: </span>');
+    $('.crowd').prepend('<span class="name">Crowd: </span>');
+    $('.goodfriend').prepend('<span class="name">Good Friend: </span>');
+    $('.god').prepend('<span class="name">God: </span>');
 });

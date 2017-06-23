@@ -22,3 +22,11 @@ span.stage::after {content: ")";}
     font-weight: bold;
     color: black;
 }
+
+table td:nth-child(1), th {
+    font-style: normal;
+}
+
+td {
+    padding: 0.5em;
+}
