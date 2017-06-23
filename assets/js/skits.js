@@ -64,14 +64,6 @@ $(document).ready(function () {
     });
 
     // Add names
-    /* RUNNING SKIT */
-    $('.stephen').prepend('<span class="name">Stephen: </span>');
-    $('.kevin').prepend('<span class="name">Kevin: </span>');
-    $('.ian').prepend('<span class="name">Ian: </span>');
-    $('.steve').prepend('<span class="name">Steve: </span>');
-    $('.ayesha').prepend('<span class="name">Ayesha: </span>');
-    $('.announcer').prepend('<span class="name">Announcer: </span>');
-
     /* BULLY SKIT */
     $('.bully').prepend('<span class="name">Bully: </span>');
     $('.daniel').prepend('<span class="name">Daniel: </span>');
@@ -113,4 +105,20 @@ $(document).ready(function () {
     $('.crowd').prepend('<span class="name">Crowd: </span>');
     $('.goodfriend').prepend('<span class="name">Good Friend: </span>');
     $('.god').prepend('<span class="name">God: </span>');
+
+    /* RUNNING SKIT */
+    $('.stephen').prepend('<span class="name">Stephen: </span>');
+    $('.kevin').prepend('<span class="name">Kevin: </span>');
+    $('.ian').prepend('<span class="name">Ian: </span>');
+    $('.steve').prepend('<span class="name">Steve: </span>');
+    $('.ayesha').prepend('<span class="name">Ayesha: </span>');
+    $('.announcer').prepend('<span class="name">Announcer: </span>');
+
+    /* BIG BALLER SKIT */
+    $('.alan').prepend('<span class="name">Alan: </span>');
+    $('.coach').prepend('<span class="name">Coach: </span>');
+    $('.andy').prepend('<span class="name">Andy: </span>');
+    $('.person1').prepend('<span class="name">Person 1: </span>');
+    $('.trainer').prepend('<span class="name">Trainer: </span>');
+    //$('.narrator').prepend('<span class="name">Narrator: </span>');
 });
