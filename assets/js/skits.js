@@ -131,4 +131,13 @@ $(document).ready(function () {
     $('.rattlesnake2').prepend('<span class="name">Rattlesnake 2: </span>');
     $('.guard').prepend('<span class="name">Guard: </span>');
     //$('.god').prepend('<span class="name">God: </span>');
+
+    /* GOD IS GRACIOUS */
+    $('.christian').prepend('<span class="name">Christian: </span>');
+    $('.mercy').prepend('<span class="name">Mercy: </span>');
+    $('.bf').prepend('<span class="name">Mercy’s new bf: </span>');
+    $('.david').prepend('<span class="name">David: </span>');
+    //$('.friend1').prepend('<span class="name">Friend 1: </span>');
+    //$('.friend2').prepend('<span class="name">Friend 2: </span>');
+    $('.grace').prepend('<span class="name">Grace: </span>');
 });
