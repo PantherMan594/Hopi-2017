@@ -79,6 +79,21 @@ $(document).ready(function () {
     $('.auntielin').prepend('<span class="name">Auntie Lin: </span>');
 
     /* GOOD SAMARITAN SKIT */
+    $('.alcoholic').prepend('<span class="name">Alcoholic: </span>');
+    $('.samaritan').prepend('<span class="name">Samaritan: </span>');
+    $('.dealer').prepend('<span class="name">Dealer: </span>');
+    $('.nurse').prepend('<span class="name">Nurse: </span>');
+    $('.random1').prepend('<span class="name">Random Character 1: </span>');
+    $('.random2').prepend('<span class="name">Random Character 2: </span>');
+    $('.snapgirl').prepend('<span class="name">Snapchat Girl: </span>');
+    $('.parent').prepend('<span class="name">Parent: </span>');
+    $('.child').prepend('<span class="name">Child: </span>');
+    $('.loser1').prepend('<span class="name">Loser 1: </span>');
+    $('.loser2').prepend('<span class="name">Loser 2: </span>');
+    $('.friend1').prepend('<span class="name">Friend 1: </span>');
+    $('.friend2').prepend('<span class="name">Friend 2: </span>');
+
+    /* ZACCHEUS SKIT */
     $('.zack').prepend('<span class="name">Zack: </span>');
     $('.jesus').prepend('<span class="name">Jesus: </span>');
     $('.tall1').prepend('<span class="name">Tall Person 1: </span>');
