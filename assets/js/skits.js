@@ -64,13 +64,13 @@ $(document).ready(function () {
     });
 
     // Add names
-    /* BULLY SKIT */
+    /* BULLY */
     $('.bully').prepend('<span class="name">Bully: </span>');
     $('.daniel').prepend('<span class="name">Daniel: </span>');
     $('.lindsey').prepend('<span class="name">Lindsey: </span>');
     $('.auntielin').prepend('<span class="name">Auntie Lin: </span>');
 
-    /* GOOD SAMARITAN SKIT */
+    /* GOOD SAMARITAN */
     $('.alcoholic').prepend('<span class="name">Alcoholic: </span>');
     $('.samaritan').prepend('<span class="name">Samaritan: </span>');
     $('.dealer').prepend('<span class="name">Dealer: </span>');
@@ -85,7 +85,7 @@ $(document).ready(function () {
     $('.friend1').prepend('<span class="name">Friend 1: </span>');
     $('.friend2').prepend('<span class="name">Friend 2: </span>');
 
-    /* ZACCHEUS SKIT */
+    /* ZACCHEUS */
     $('.zack').prepend('<span class="name">Zack: </span>');
     $('.jesus').prepend('<span class="name">Jesus: </span>');
     $('.tall1').prepend('<span class="name">Tall Person 1: </span>');
@@ -94,7 +94,7 @@ $(document).ready(function () {
     $('.citizen').prepend('<span class="name">Citizen: </span>');
     $('.crowd').prepend('<span class="name">Crowd: </span>');
 
-    /* PRODIGAL SON SKIT */
+    /* PRODIGAL SON */
     $('.penny').prepend('<span class="name">Penny: </span>');
     $('.dame').prepend('<span class="name">Dame: </span>');
     $('.dad').prepend('<span class="name">Dad: </span>');
@@ -106,7 +106,7 @@ $(document).ready(function () {
     $('.goodfriend').prepend('<span class="name">Good Friend: </span>');
     $('.god').prepend('<span class="name">God: </span>');
 
-    /* RUNNING SKIT */
+    /* RUNNING */
     $('.stephen').prepend('<span class="name">Stephen: </span>');
     $('.kevin').prepend('<span class="name">Kevin: </span>');
     $('.ian').prepend('<span class="name">Ian: </span>');
@@ -114,11 +114,21 @@ $(document).ready(function () {
     $('.ayesha').prepend('<span class="name">Ayesha: </span>');
     $('.announcer').prepend('<span class="name">Announcer: </span>');
 
-    /* BIG BALLER SKIT */
+    /* BIG BALLER */
     $('.alan').prepend('<span class="name">Alan: </span>');
     $('.coach').prepend('<span class="name">Coach: </span>');
     $('.andy').prepend('<span class="name">Andy: </span>');
     $('.person1').prepend('<span class="name">Person 1: </span>');
     $('.trainer').prepend('<span class="name">Trainer: </span>');
     //$('.narrator').prepend('<span class="name">Narrator: </span>');
+
+    /* DANIEL IN THE RATTLESNAKE CAVE */
+    //$('.daniel').prepend('<span class="name">Daniel: </span>');
+    $('.man1').prepend('<span class="name">Man 1: </span>');
+    $('.man2').prepend('<span class="name">Man 2: </span>');
+    $('.king').prepend('<span class="name">King: </span>');
+    $('.rattlesnake1').prepend('<span class="name">Rattlesnake 1: </span>');
+    $('.rattlesnake2').prepend('<span class="name">Rattlesnake 2: </span>');
+    $('.guard').prepend('<span class="name">Guard: </span>');
+    //$('.god').prepend('<span class="name">God: </span>');
 });
