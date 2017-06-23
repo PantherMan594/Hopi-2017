@@ -62,4 +62,28 @@ $(document).ready(function () {
         }
         update();
     });
+
+    // Add names
+    /* RUNNING SKIT */
+    $('.stephen').prepend('<span class="name">Stephen: </span>');
+    $('.kevin').prepend('<span class="name">Kevin: </span>');
+    $('.ian').prepend('<span class="name">Ian: </span>');
+    $('.steve').prepend('<span class="name">Steve: </span>');
+    $('.ayesha').prepend('<span class="name">Ayesha: </span>');
+    $('.announcer').prepend('<span class="name">Announcer: </span>');
+
+    /* BULLY SKIT */
+    $('.bully').prepend('<span class="name">Bully: </span>');
+    $('.daniel').prepend('<span class="name">Daniel: </span>');
+    $('.lindsey').prepend('<span class="name">Lindsey: </span>');
+    $('.auntielin').prepend('<span class="name">Auntie Lin: </span>');
+
+    /* GOOD SAMARITAN SKIT */
+    $('.zack').prepend('<span class="name">Zack: </span>');
+    $('.jesus').prepend('<span class="name">Jesus: </span>');
+    $('.tall1').prepend('<span class="name">Tall Person 1: </span>');
+    $('.tall2').prepend('<span class="name">Tall Person 2: </span>');
+    $('.narrator').prepend('<span class="name">Narrator: </span>');
+    $('.citizen').prepend('<span class="name">Citizen: </span>');
+    $('.crowd').prepend('<span class="name">Crowd: </span>');
 });
