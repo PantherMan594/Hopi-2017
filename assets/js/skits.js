@@ -5,7 +5,13 @@ var showLine = true;
 var showOtherLines = true;
 var showStage = true;
 
-function update() {
+function update(keepUrl) {
+    $('#char').val(character);
+    $('#showaround').prop('checked', showAround);
+    $('#showall').prop('checked', showAll);
+    $('#showline').prop('checked', showLine);
+    $('#showotherlines').prop('checked', showOtherLines);
+    $('#showstage').prop('checked', showStage);
     var lines = $('#skitlines').children('.line');
     for (var i = 0; i < lines.length; i++) {
         var line = $(lines[i]);
@@ -36,7 +42,33 @@ function update() {
             }
         }
     }
+
+    if (!keepUrl)
+        history.pushState('', '', window.location.pathname + '?c='
+            + character + (showOtherLines ? '' : '&ot=0')
+            + (showAll ? '' : '&al=0') + (showAround ? '' : '&ar=0')
+            + (showLine ? '' : '&li=0') + (showStage ? '' : '&st=0'));
 }
+
+var urlParams;
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+        urlParams[decode(match[1])] = decode(match[2]);
+    character = urlParams['c'] ? urlParams['c'] : 'all';
+    showAround = urlParams['ar'] ? false : true;
+    showAll = urlParams['al'] ? false : true;
+    showLine = urlParams['li'] ? false : true;
+    showOtherLines = urlParams['ot'] ? false : true;
+    showStage = urlParams['st'] ? false : true;
+    update(true);
+})();
 
 $(document).ready(function () {    
     $('#char').change(function () {
