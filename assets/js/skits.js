@@ -2,6 +2,7 @@ var character = 'all';
 var showAround = true;
 var showAll = true;
 var showLine = true;
+var showCue = true;
 var showOtherLines = true;
 var showStage = true;
 
@@ -9,12 +10,14 @@ function update(keepUrl) {
     $('#controlbox').append('<input type="checkbox" id="showaround" value="around" checked/> Show lines around character<br />'
         + '<input type="checkbox" id="showall" value="all" checked/> Show all other lines<br />'
         + '<input type="checkbox" id="showline" value="line" checked/> Show character line<br />'
+        + '<input type="checkbox" id="showcue" value="cue" checked/> Show character line cues<br />'
         + '<input type="checkbox" id="showotherlines" value="other" checked/> Show other lines<br />'
         + '<input type="checkbox" id="showstage" value="stage" checked/> Show stage directions');
     $('#char').val(character);
     $('#showaround').prop('checked', showAround);
     $('#showall').prop('checked', showAll);
     $('#showline').prop('checked', showLine);
+    $('#showcue').prop('checked', showCue);
     $('#showotherlines').prop('checked', showOtherLines);
     $('#showstage').prop('checked', showStage);
     var lines = $('#skitlines').children('.line');
@@ -28,12 +31,16 @@ function update(keepUrl) {
             else line.hide();
         } else if (!line.hasClass('scene')) {
             if (line.hasClass(character)) {
-                line.show();
-                line.addClass('highlight');
-                if (!showLine) {
-                    line.addClass('hideLine');
+                if (showCue) {
+                    line.show();
+                    line.addClass('highlight');
+                    if (!showLine) {
+                        line.addClass('hideLine');
+                    } else {
+                        line.removeClass('hideLine');
+                    }
                 } else {
-                    line.removeClass('hideLine');
+                    line.hide();
                 }
             } else if (showAll || (showAround && ((prevLine && prevLine.hasClass(character)) || (nextLine && nextLine.hasClass(character))))) {
                 line.show();
@@ -49,8 +56,8 @@ function update(keepUrl) {
     }
 
     if (!keepUrl)
-        history.pushState('', '', window.location.pathname + '?c='
-            + character + (showOtherLines ? '' : '&ot=0')
+        history.pushState('', '', window.location.pathname + '?c='+ character
+            + (showCue ? '' : '&cu=0') + (showOtherLines ? '' : '&ot=0')
             + (showAll ? '' : '&al=0') + (showAround ? '' : '&ar=0')
             + (showLine ? '' : '&li=0') + (showStage ? '' : '&st=0'));
 }
@@ -70,6 +77,7 @@ var urlParams;
     showAround = urlParams['ar'] ? false : true;
     showAll = urlParams['al'] ? false : true;
     showLine = urlParams['li'] ? false : true;
+    showCue = urlParams['cu'] ? false : true;
     showOtherLines = urlParams['ot'] ? false : true;
     showStage = urlParams['st'] ? false : true;
     update(true);
