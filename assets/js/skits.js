@@ -101,6 +101,9 @@ $(document).ready(function () {
             case 'line':
                 showLine = this.checked;
                 break;
+            case 'cue':
+                showCue = this.checked;
+                break;
             case 'other':
                 showOtherLines = this.checked;
                 break;
