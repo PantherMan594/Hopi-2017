@@ -6,6 +6,11 @@ var showOtherLines = true;
 var showStage = true;
 
 function update(keepUrl) {
+    $('#controlbox').append('<input type="checkbox" id="showaround" value="around" checked/> Show lines around character<br />'
+        + '<input type="checkbox" id="showall" value="all" checked/> Show all other lines<br />'
+        + '<input type="checkbox" id="showline" value="line" checked/> Show character line<br />'
+        + '<input type="checkbox" id="showotherlines" value="other" checked/> Show other lines<br />'
+        + '<input type="checkbox" id="showstage" value="stage" checked/> Show stage directions');
     $('#char').val(character);
     $('#showaround').prop('checked', showAround);
     $('#showall').prop('checked', showAll);
