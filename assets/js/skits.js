@@ -191,7 +191,7 @@ $(document).ready(function () {
     //$('.friend1').prepend('<span class="name">Friend 1: </span>');
     //$('.friend2').prepend('<span class="name">Friend 2: </span>');
     $('.grace').prepend('<span class="name">Grace: </span>');
-    $('.angel').prepend('<span class="name">Angel: </span>');
+    //$('.narrator').prepend('<span class="name">Narrator: </span>');
 
     update(true);
 });
