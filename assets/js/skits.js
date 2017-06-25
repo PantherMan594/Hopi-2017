@@ -78,11 +78,11 @@ var urlParams;
 })();
 
 $(document).ready(function () {    
-    $('#controlbox').append('<input type="checkbox" id="showaround" value="around" checked/> Show lines around character<br />'
+    $('#controlbox').append('<input type="checkbox" id="showaround" value="around" checked/> Show lines around character (to practice getting in/out of lines)<br />'
         + '<input type="checkbox" id="showall" value="all" checked/> Show all other lines<br />'
-        + '<input type="checkbox" id="showline" value="line" checked/> Show character line<br />'
-        + '<input type="checkbox" id="showcue" value="cue" checked/> Show character line cues<br />'
-        + '<input type="checkbox" id="showotherlines" value="other" checked/> Show other lines<br />'
+        + '<input type="checkbox" id="showline" value="line" checked/> Show character line (uncheck to memorize lines, though you can still highlight them to see the text)<br />'
+        + '<input type="checkbox" id="showcue" value="cue" checked/> Show character line cues (completely hide the lines, to memorize getting in/out of lines)<br />'
+        + '<input type="checkbox" id="showotherlines" value="other" checked/> Show other lines (uncheck if you don\'t care what other characters are saying, but just need their cues)<br />'
         + '<input type="checkbox" id="showstage" value="stage" checked/> Show stage directions');
     
     $('#char').change(function () {
