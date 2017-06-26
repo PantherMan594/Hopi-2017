@@ -141,7 +141,7 @@ $(document).ready(function () {
     $('.dad').prepend('<span class="name">Dad: </span>');
     $('.son').prepend('<span class="name">Son: </span>');
     $('.harasser1').prepend('<span class="name">Harasser 1: </span>');
-    $('.Harasser2').prepend('<span class="name">Harasser 2: </span>');
+    $('.harasser2').prepend('<span class="name">Harasser 2: </span>');
     $('.injuredboy').prepend('<span class="name">Injured Boy: </span>');
     $('.ped').prepend('<span class="name">Ped: </span>');
     $('.meanped').prepend('<span class="name">Mean Ped: </span>');
