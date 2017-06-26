@@ -136,9 +136,20 @@ $(document).ready(function () {
     $('.friend1').prepend('<span class="name">Friend 1: </span>');
     $('.friend2').prepend('<span class="name">Friend 2: </span>');
 
+    /* GOOD SAMARITAN (KIDS) */
+
+    $('.dad').prepend('<span class="name">Dad: </span>');
+    $('.son').prepend('<span class="name">Son: </span>');
+    $('.harasser1').prepend('<span class="name">Harasser 1: </span>');
+    $('.Harasser2').prepend('<span class="name">Harasser 2: </span>');
+    $('.injuredboy').prepend('<span class="name">Injured Boy: </span>');
+    $('.ped').prepend('<span class="name">Ped: </span>');
+    $('.meanped').prepend('<span class="name">Mean Ped: </span>');
+    $('.jesus').prepend('<span class="name">Jesus: </span>');
+
     /* ZACCHEUS */
     $('.zack').prepend('<span class="name">Zack: </span>');
-    $('.jesus').prepend('<span class="name">Jesus: </span>');
+    //$('.jesus').prepend('<span class="name">Jesus: </span>');
     $('.tall1').prepend('<span class="name">Tall Person 1: </span>');
     $('.tall2').prepend('<span class="name">Tall Person 2: </span>');
     $('.narrator').prepend('<span class="name">Narrator: </span>');
@@ -148,7 +159,7 @@ $(document).ready(function () {
     /* PRODIGAL SON */
     $('.penny').prepend('<span class="name">Penny: </span>');
     $('.dame').prepend('<span class="name">Dame: </span>');
-    $('.dad').prepend('<span class="name">Dad: </span>');
+    //$('.dad').prepend('<span class="name">Dad: </span>');
     $('.boy1').prepend('<span class="name">Boy 1: </span>');
     $('.boy2').prepend('<span class="name">Boy 2: </span>');
     //$('.friend1').prepend('<span class="name">Friend 1: </span>');
