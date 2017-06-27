@@ -199,9 +199,10 @@ $(document).ready(function () {
     $('.mercy').prepend('<span class="name">Mercy: </span>');
     $('.bf').prepend('<span class="name">Mercy’s new bf: </span>');
     $('.david').prepend('<span class="name">David: </span>');
-    //$('.friend1').prepend('<span class="name">Friend 1: </span>');
-    //$('.friend2').prepend('<span class="name">Friend 2: </span>');
+    $('.adam').prepend('<span class="name">Adam: </span>');
+    $('.richie').prepend('<span class="name">Richie: </span>');
     $('.grace').prepend('<span class="name">Grace: </span>');
+    $('.teacher').prepend('<span class="name">Teacher: </span>');
     //$('.narrator').prepend('<span class="name">Narrator: </span>');
 
     update(true);

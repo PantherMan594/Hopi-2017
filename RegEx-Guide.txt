@@ -1,0 +1,33 @@
+\t
+
+
+\n *\n
+\n
+(Repeat until none left)
+
+^\((.+)\)$
+$1
+
+ \((.+)\):
+: ($1)
+
+^
+<div class="line">
+
+$
+</div>
+
+"line">([^:]+): 
+"line $1">
+
+\(([^()]+)\)
+<span class="stage">$1</span>
+
+"line [Disp Name]"
+"line [internalname]"
+
+"line">Scene
+"line scene">Scene
+
+"line"
+"line stage"
