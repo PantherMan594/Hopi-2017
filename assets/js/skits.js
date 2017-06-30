@@ -114,15 +114,15 @@ $(document).ready(function () {
         update();
     });
 
-    $('#controlbox').prepend('<a href="bully">Bully</a>&emsp;'
-        + '<a href="good-samaritan">Good Samaritan</a>&emsp;'
-        + '<a href="good-samaritan-kids">Good Samaritan (kids)</a>&emsp;'
-        + '<a href="zaccheus">Zaccheus</a>&emsp;'
-        + '<a href="prodigal-son">Prod Son-ish</a>&emsp;'
-        + '<a href="running">Running</a>&emsp;'
-        + '<a href="big-baller">Big Baller</a>&emsp;'
-        + '<a href="daniel">Daniel in Cave</a>&emsp;'
-        + '<a href="god-is-gracious">God is Gracious</a><br /><br />');
+    $('#controlbox').prepend('<a href="bully.html">Bully</a>&emsp;'
+        + '<a href="good-samaritan.html">Good Samaritan</a>&emsp;'
+        + '<a href="good-samaritan-kids.html">Good Samaritan (kids)</a>&emsp;'
+        + '<a href="zaccheus.html">Zaccheus</a>&emsp;'
+        + '<a href="prodigal-son.html">Prod Son-ish</a>&emsp;'
+        + '<a href="running.html">Running</a>&emsp;'
+        + '<a href="big-baller.html">Big Baller</a>&emsp;'
+        + '<a href="daniel.html">Daniel in Cave</a>&emsp;'
+        + '<a href="god-is-gracious.html">God is Gracious</a><br /><br />');
 
     // Add names
     /* BULLY */
