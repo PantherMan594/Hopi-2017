@@ -42,3 +42,13 @@ td {
 .highlight .name {
     background-color: yellow;
 }
+
+@media print {
+    #controlbox {
+        display: none;
+    }
+
+    .highlight .name {
+        -webkit-print-color-adjust: exact; 
+    }
+}
